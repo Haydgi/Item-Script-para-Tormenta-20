@@ -2,7 +2,7 @@
   "id": "item-script-para-tormenta-20",
   "title": "Item Script para Tormenta 20",
   "description": "<p>Permite definir scripts personalizados que rodam ao usar um item no sistema Tormenta 20. Inspirado no módulo Item Macro.</p>",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": {
     "minimum": "13",
     "verified": "13"
