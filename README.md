@@ -51,5 +51,6 @@ O módulo inclui um compêndio com macros para controle de Engenhocas.
 ## info
 
 Desenvolvido por Haydgi
+
 Discord: xdhayd
 
