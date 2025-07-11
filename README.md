@@ -18,27 +18,22 @@ Permite executar um script personalizado automaticamente ao usar qualquer item n
 Exemplo de script dentro de uma engenhoca para controlar sua CD de ativação:
 
 ```js
-const SCOPE = "my-macros";
 const ENGENHOCA = item.name;
 const CIRCULO = Number(item.system?.circulo) || 1;
 const CIRCULO_BONUS = [0, 1, 3, 6, 10, 15][CIRCULO] || 1;
-const KEY = `cd_${ENGENHOCA.toLowerCase().replace(/\s+/g, "_")}`;
 
-// Sempre registra novamente com default correto
-game.settings.register(SCOPE, KEY, {
-  name: `CD da Engenhoca: ${ENGENHOCA}`,
-  scope: "world",
-  config: false,
-  type: Number,
-  default: 15 + CIRCULO_BONUS
-});
 
-// Atualiza valor
-let valor = game.settings.get(SCOPE, KEY);
+let valor = await item.getFlag("item-script-para-tormenta-20", "cd");
+
+
+if (typeof valor !== "number") {
+  valor = 15 + CIRCULO_BONUS;
+}
+
 valor += 5;
-await game.settings.set(SCOPE, KEY, valor);
 
-// Mensagem
+await item.setFlag("item-script-para-tormenta-20", "cd", valor);
+
 ChatMessage.create({
   content: `<b>CD atual de ${ENGENHOCA}:</b> ${valor - 5} (Círculo: ${CIRCULO})`,
   speaker: ChatMessage.getSpeaker()
