@@ -5,7 +5,7 @@ Permite executar um script personalizado automaticamente ao usar qualquer item n
 ## Funcionalidades
 
 - Adiciona botão "Script" no topo da janela de interface dos itens.
-- Executa o script definido sempre que o item for usado. Exemplos de scripts uteis seria para ligar a outros módulos que não tem compatibilidade direta com o Tormenta 20, controlar CD de Engenhocas e outros recursos que são baseados em numero de usos.
+- Executa o script definido sempre que o item for usado. Exemplos de scripts uteis são: ligar a outros módulos que não tem compatibilidade direta com o Tormenta 20, controlar CD de Engenhocas e outros recursos que são baseados em numero de usos (tipo as cargas do magimarcialista).
 - Consegue interagir com propriedades do item que está ligado (como obter o nome ou circulo da magia).
 
 ## Como usar
@@ -13,7 +13,7 @@ Permite executar um script personalizado automaticamente ao usar qualquer item n
 1. Edite um item qualquer.
 2. Clique no botão `Script` no topo da ficha.
 3. Digite o script que deseja executar.
-4. Salve e use o item normalmente!
+4. Salve e use o item normalmente.
 
 Exemplo de script dentro de uma engenhoca para controlar sua CD de ativação:
 
